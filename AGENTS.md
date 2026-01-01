@@ -24,8 +24,10 @@
 
 ## Testing instructions
 
-- Use Vitest + React Testing Library for unit/integration tests. Colocate unit and integration tests in the same directory they are testing.
-- Use Playwright for end-to-end tests. Use a dedicated `/tests` folder in the root directory to house the end-to-end tests.
+- Use Vitest + React Testing Library for unit/integration tests.
+- Colocate unit/integration tests next to the file under test (e.g., `app/page.test.tsx`).
+- Do not create `tests/unit` or other centralized unit-test folders.
+- Use Playwright for end-to-end tests in `tests/e2e`.
 - Add scripts in `package.json` when wiring tests:
   - `test`: `vitest`
   - `test:ui`: `vitest --ui`
